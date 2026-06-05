@@ -201,6 +201,10 @@ DELETE FROM [synergix].[C_ROLE_EXT] WHERE [ROLE_EXT]=1
 
 
 
+
+delete from  synergix.X_STATUS_NEXT_APPL where status_next = 3 and status !=3 
+and application in (select application from synergix.A_APPLICATION where descend_application in (179))  --541
+
 /*
 ALTER TABLE ENERGY.C_REFERENCE CHECK  CONSTRAINT [R_SYNERGI_3927];
 ALTER TABLE ENERGY.C_REFERENCE CHECK CONSTRAINT [R_SYNERGI_3928];
